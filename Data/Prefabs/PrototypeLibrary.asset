@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595a7e0fe239c084abe9a70d6d12cecb, type: 3}
+  m_Name: PrototypeLibrary
+  m_EditorClassIdentifier: Assembly-CSharp::TFGToolkit.PrototypeLibraryConfig
+  Prefabs:
+  - {fileID: 11400000, guid: 865bf198bae734d4f96cf68061453503, type: 2}
+  - {fileID: 11400000, guid: 863f7627744b4544a9ce6765153be45e, type: 2}
+  - {fileID: 11400000, guid: 4ea9a912546bdb04e91b5c317b071733, type: 2}
+  - {fileID: 11400000, guid: 4f8d30861d74e0942bc194d9cfdfbb7c, type: 2}
+  - {fileID: 11400000, guid: 316c3157ea81c0b4eb17b96c3dd10261, type: 2}
+  - {fileID: 11400000, guid: ee7ae743260fa614da4204dc2d04bcc9, type: 2}
+  - {fileID: 11400000, guid: 1399f49667883d042afca46eddd59e95, type: 2}
+  - {fileID: 11400000, guid: 1351f5eb98a260d40845c8fc9a80f05e, type: 2}
+  - {fileID: 11400000, guid: 5f6a0ae025879a84eafbd8b2010952d6, type: 2}
+  - {fileID: 11400000, guid: edfc9003cff275c46a9bba90774d947a, type: 2}

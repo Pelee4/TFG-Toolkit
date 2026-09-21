@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32894cb18739e9f41b59bec37b38ec25, type: 3}
+  m_Name: Dialogos
+  m_EditorClassIdentifier: Assembly-CSharp::TFGToolkit.DialogueData
+  TreeName: "Nuevo \xE1rbol"
+  Description: 
+  Scene: 
+  Nodes:
+  - Id: 66059ed0-f227-4a63-a3f9-d00d3175e559
+    Type: 0
+    PosX: 211
+    PosY: 29
+    CharacterGUID: 
+    DialogueText: 
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  - Id: a32025c4-5cae-409b-b2a8-b3148b85e0b3
+    Type: 1
+    PosX: 315
+    PosY: 104
+    CharacterGUID: 2e17ce3e4f65d014185f185053949bcd
+    DialogueText: Nadie cruza esta sala
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  - Id: 2c47a9d3-73d3-4773-815f-d08170ce6199
+    Type: 2
+    PosX: 530
+    PosY: 182
+    CharacterGUID: 
+    DialogueText: 
+    Choices:
+    - Id: 6bce044b-3fae-4b97-bf9d-c0742d883305
+      Text: "D\xE9jame pasar"
+      TargetNodeId: 
+    - Id: 2923ed05-ad16-45c8-9141-d7e72ff85244
+      Text: "Ap\xE1rtate o lucharemos"
+      TargetNodeId: 
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  - Id: 45a5cb09-debe-4f92-9f84-d2e2ea0f7c49
+    Type: 5
+    PosX: 859
+    PosY: 246
+    CharacterGUID: 
+    DialogueText: 
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  - Id: e230b015-de07-44d3-9e20-dcf9a3ca721d
+    Type: 4
+    PosX: 748
+    PosY: 127
+    CharacterGUID: 
+    DialogueText: 
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 1. Pasa sin combate
+    EndDescription: 
+    DesignerNotes: 
+  - Id: baeb8de3-419e-4eb8-9d0b-7be45a2f626c
+    Type: 4
+    PosX: 687
+    PosY: 271
+    CharacterGUID: 
+    DialogueText: 
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 2. Comienza el combate
+    EndDescription: 
+    DesignerNotes: 
+  Edges:
+  - Id: 2a7da166-54c7-401e-9cfb-86be65d1e29a
+    SourceNodeId: 66059ed0-f227-4a63-a3f9-d00d3175e559
+    TargetNodeId: a32025c4-5cae-409b-b2a8-b3148b85e0b3
+    ChoiceId: 
+    Label: 
+  - Id: 2ee8d44b-dff0-4fe5-841a-8e16fd4f4ca8
+    SourceNodeId: a32025c4-5cae-409b-b2a8-b3148b85e0b3
+    TargetNodeId: 2c47a9d3-73d3-4773-815f-d08170ce6199
+    ChoiceId: 
+    Label: 
+  - Id: ac49c4ae-51eb-4078-8ed5-a869e8689727
+    SourceNodeId: 2c47a9d3-73d3-4773-815f-d08170ce6199
+    TargetNodeId: e230b015-de07-44d3-9e20-dcf9a3ca721d
+    ChoiceId: 
+    Label: 
+  - Id: 7eb1b551-a233-4ed3-a848-9ea64c2e6b26
+    SourceNodeId: 2c47a9d3-73d3-4773-815f-d08170ce6199
+    TargetNodeId: baeb8de3-419e-4eb8-9d0b-7be45a2f626c
+    ChoiceId: 
+    Label: 
+  - Id: d7fdd909-1890-451c-9b65-a4033e272a91
+    SourceNodeId: baeb8de3-419e-4eb8-9d0b-7be45a2f626c
+    TargetNodeId: 45a5cb09-debe-4f92-9f84-d2e2ea0f7c49
+    ChoiceId: 
+    Label: 
+  - Id: 002225de-9959-46e9-95ff-35d0762c9249
+    SourceNodeId: e230b015-de07-44d3-9e20-dcf9a3ca721d
+    TargetNodeId: 45a5cb09-debe-4f92-9f84-d2e2ea0f7c49
+    ChoiceId: 
+    Label: 
+  LastAIAnalysis: 

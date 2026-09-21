@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ed2380201e1974a8fc45c6fe2348bf, type: 3}
+  m_Name: CaballeroOscuro
+  m_EditorClassIdentifier: Assembly-CSharp::TFGToolkit.CharacterData
+  characterName: "Guardi\xE1n de piedra"
+  role: 1
+  description: ' Coloso de roca agrietada, lento y macizo'
+  backstory: Centinela antiguo que custodia la sala del artefacto
+  motivation: 'Impedir el paso a cualquier intruso '
+  health: 60
+  attack: 20
+  defense: 15
+  speed: 3
+  abilities: "golpe pesado de \xE1rea "
+  relatedMechanics:
+  - {fileID: 11400000, guid: 6ad202dbefd92214790cc4df3c7bce40, type: 2}
+  designNotes: 

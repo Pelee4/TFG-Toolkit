@@ -1,0 +1,27 @@
+{
+    "ShowMechanics": true,
+    "ShowCharacters": true,
+    "Columns": [
+        {
+            "Id": "731fc295-cf44-486f-8b2f-a52b1c6e1155",
+            "Label": "💡 Idea",
+            "ColorHex": "#8892A4",
+            "Visible": true,
+            "MechanicStatusValue": 0
+        },
+        {
+            "Id": "b8065193-9433-45fa-b6c6-f0d50bddac81",
+            "Label": "🔧 En desarrollo",
+            "ColorHex": "#F0A500",
+            "Visible": true,
+            "MechanicStatusValue": 1
+        },
+        {
+            "Id": "63a7de46-f3b8-4eb7-bd6e-b869097b099c",
+            "Label": "✅ Implementada",
+            "ColorHex": "#4CAF50",
+            "Visible": true,
+            "MechanicStatusValue": 2
+        }
+    ]
+}

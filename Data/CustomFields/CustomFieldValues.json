@@ -1,0 +1,22 @@
+{
+    "Assets": [
+        {
+            "AssetGuid": "9d577810beb11c249b3866b33623d6b4",
+            "Values": [
+                {
+                    "FieldId": "de5d69ca-4eb7-4a45-925c-78001b915ae9",
+                    "Value": "0"
+                }
+            ]
+        },
+        {
+            "AssetGuid": "b8fb658afc7a93c409848b639d8787ee",
+            "Values": [
+                {
+                    "FieldId": "a0e1e1e0-6cf4-49b1-938f-4baeefe7d438",
+                    "Value": "incluye animación + SFX"
+                }
+            ]
+        }
+    ]
+}

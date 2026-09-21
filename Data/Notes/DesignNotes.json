@@ -1,0 +1,64 @@
+{
+    "Notes": [
+        {
+            "Id": "59d30bff-7076-4197-9f6e-f470da4837ad",
+            "Type": 3,
+            "Title": "Personaje Volador",
+            "Content": "Idear un personaje volador con habilidades específicas como vuelo, disparar desde el aire o generar vórtices. Establecer reglas de uso para evitar abusos.",
+            "Author": "Agente IA",
+            "Date": "14/07/2026 12:09",
+            "LinkedAsset": "",
+            "Resolved": false
+        },
+        {
+            "Id": "cb13c6d9-a6f0-46c2-a723-d50ef511ba5d",
+            "Type": 3,
+            "Title": "Dínamica del doble salto",
+            "Content": "Encadenar el Doble salto con el Dash en el aire.",
+            "Author": "Jorge",
+            "Date": "10/07/2026 11:17",
+            "LinkedAsset": "Assets/TFGToolkit/Data/Mechanic/Doblesalto.asset",
+            "Resolved": false
+        },
+        {
+            "Id": "e03ebcf0-e13e-4c26-94f9-3e3922aae384",
+            "Type": 2,
+            "Title": "Ajustes de mecánica",
+            "Content": "Ajustar la fuerza del salto tras las pruebas en escena.",
+            "Author": "Jorge",
+            "Date": "10/07/2026 11:15",
+            "LinkedAsset": "Assets/TFGToolkit/Data/Character/Protagonista.asset",
+            "Resolved": false
+        },
+        {
+            "Id": "f79cfa5b-0d63-4608-acff-4ebf94e609e7",
+            "Type": 1,
+            "Title": "Como definir el salto",
+            "Content": "Persistencia con ScriptableObjects y referencias directas, sin IDs externos.",
+            "Author": "Jorge",
+            "Date": "10/07/2026 11:14",
+            "LinkedAsset": "Assets/TFGToolkit/Data/Mechanic/Salto.asset",
+            "Resolved": false
+        },
+        {
+            "Id": "264a02fc-487f-4b5a-bb1c-56af16f0ab06",
+            "Type": 0,
+            "Title": "Equilibrar la ventana de parry según el playtest",
+            "Content": "",
+            "Author": "Agente IA",
+            "Date": "22/06/2026 11:43",
+            "LinkedAsset": "",
+            "Resolved": false
+        },
+        {
+            "Id": "3969617f-ccfc-4b37-80c0-8ec68b7b53c0",
+            "Type": 0,
+            "Title": "Parry",
+            "Content": "El parry debe sentirse arriesgado pero recompensante.",
+            "Author": "Jorge",
+            "Date": "22/06/2026 11:40",
+            "LinkedAsset": "Assets/TFGToolkit/Data/Mechanic/Parry.asset",
+            "Resolved": false
+        }
+    ]
+}

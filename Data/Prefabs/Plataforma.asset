@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9f659076d37cb44a9b023b720ac9c6, type: 3}
+  m_Name: Plataforma
+  m_EditorClassIdentifier: Assembly-CSharp::TFGToolkit.PrototypePrefabData
+  PrefabName: Plataforma
+  Category: 1
+  Description: "Cubo est\xE1tico con BoxCollider."
+  BasePrefab: {fileID: 0}
+  PrimitiveShape: 3
+  GizmoColor: {r: 0.6, g: 0.6, b: 0.6, a: 1}
+  BaseComponents:
+  - ComponentTypeName: BoxCollider
+    DisplayName: BoxCollider
+  LinkedMechanics: []
+  AssignedMechanicGuids: []

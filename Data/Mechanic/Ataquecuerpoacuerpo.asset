@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cda33155b7b848a4e9b4e25bcbe93656, type: 3}
+  m_Name: Ataquecuerpoacuerpo
+  m_EditorClassIdentifier: Assembly-CSharp::TFGToolkit.MechanicData
+  mechanicName: Ataque cuerpo a cuerpo
+  description: "Golpe cercano que da\xF1a a enemigos en rango frontal."
+  input: Clic izquierdo
+  effect: "Activa un collider de da\xF1o frontal un instante"
+  duration: 0.3
+  status: 2
+  generatedScript: "```csharp\nusing UnityEngine;\nusing UnityEngine.InputSystem;\n\npublic
+    class AtaqueCorpusCaesCuerpo : MonoBehaviour\n{\n    private void Update()\n   
+    {\n        if (Input.GetKeyDown(KeyCode.LeftControl))\n        {\n           
+    Collider frontalCollider = Instantiate(FrontalDamageCollider, transform.position,
+    Quaternion.identity);\n            Destroy(frontalCollider.gameObject, 0.3f);\n       
+    }\n    }\n\n    [System.Serializable]\n    private class FrontalDamageCollider
+    : MonoBehaviour\n    {\n        public void OnEnable()\n        {\n           
+    Collider2D collider = GetComponent\\u003cCollider2D\\u003e();\n            if
+    (collider != null)\n            {\n                Rigidbody2D rb = GameObject.FindObjectOfType\\u003cRigidbody2D\\u003e();\n               
+    if (rb != null)\n                    rb.AddForce(transform.forward * 5, ForceMode2D.Impulse);\n               
+    Destroy(this);\n            }\n        }\n    }\n\n    private void OnEnable()\n   
+    {\n        InputSystem.Enablew();\n    }\n}\n```"

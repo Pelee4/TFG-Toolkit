@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c9c670f637d3cd40b856c749455b3a2, type: 3}
+  m_Name: GuiaDeEstilo
+  m_EditorClassIdentifier: Assembly-CSharp::TFGToolkit.ArtStyleGuideData
+  GameTitle: Protagonista
+  ArtisticDirectionStatement: "Describe la direcci\xF3n art\xEDstica general del
+    juego.\nEj: 'Juego 2D pixel art con una paleta c\xE1lida inspirada en 8-bit cl\xE1sico.'"
+  PrimaryStyle: 5
+  StyleDescription: "Detalla m\xE1s sobre el estilo elegido."
+  VisualReferences: "Menciona referencias art\xEDsticas.\nEj: 'Zelda, Super Metroid,
+    Hollow Knight'"
+  ColorPalette:
+  - Name: Azul
+    Value: {r: 0.3773585, g: 0.1512994, b: 0.1512994, a: 0}
+    Usage: Primario
+  - Name: Amarillo
+    Value: {r: 0.9098039, g: 0.6509804, b: 0.15686275, a: 0}
+    Usage: Secundario
+  - Name: Blanco
+    Value: {r: 0.9490196, g: 0.9490196, b: 0.9490196, a: 0}
+    Usage: Texto
+  Typographies:
+  - Name: Legacy
+    Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    Size: 13
+    Color: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 0}
+    Style: Bold
+    Usage: Errores
+  Mood: Hola
+  UIGuidelines: 'Notas sobre botones, iconos, elementos de UI.
+
+    Ej: ''Bordes
+    redondeados de 4px, sombras suaves'''
+  TechnicalConstraints: "Limitaciones de resoluci\xF3n, paleta limitada, etc.\nEj:
+    'Paleta de 16 colores m\xE1ximo, resoluci\xF3n 320x180'"

@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi juego — GDD</title>
+    <style>
+        :root { --bg:#1a1a2e; --surface:#16213e; --card:#0f3460; --accent:#e94560; --text:#eaeaea; --muted:#8892a4; --code-bg:#0d1117; --border:#30363d; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family:'Segoe UI',system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.7; padding:2rem; }
+        h1 { font-size:2.4rem; color:var(--accent); margin-bottom:0.5rem; }
+        h2 { font-size:1.6rem; color:var(--accent); margin:2.5rem 0 1rem; padding-bottom:0.4rem; border-bottom:2px solid var(--accent); }
+        h3 { font-size:1.2rem; color:#7ec8e3; margin:1.8rem 0 0.6rem; }
+        p  { margin:0.5rem 0; color:var(--text); }
+        li { margin:0.3rem 0 0.3rem 1.5rem; }
+        hr { border:none; border-top:1px solid var(--border); margin:1.5rem 0; }
+        blockquote { border-left:3px solid var(--accent); padding:0.5rem 1rem; color:var(--muted); background:var(--surface); border-radius:0 6px 6px 0; margin:1rem 0; }
+        pre { background:var(--code-bg); border:1px solid var(--border); border-radius:8px; padding:1rem; overflow-x:auto; margin:1rem 0; }
+        code { font-family:'Consolas','Fira Code',monospace; font-size:0.88rem; color:#c9d1d9; }
+        table { width:100%; border-collapse:collapse; margin:1rem 0; background:var(--surface); border-radius:8px; overflow:hidden; }
+        th { background:var(--card); color:var(--text); padding:0.6rem 1rem; text-align:left; font-weight:600; }
+        td { padding:0.6rem 1rem; border-top:1px solid var(--border); }
+        tr:hover td { background:rgba(255,255,255,0.03); }
+        strong { color:#7ec8e3; }
+        em { color:var(--muted); font-style:italic; }
+        @media print { body{background:white;color:black;} h1,h2{color:#c0392b;} h3{color:#2980b9;} }
+    </style>
+</head>
+<body>
+<h1>Mi juego</h1>
+<br>
+<blockquote><strong>Versión:</strong> 0.1</blockquote>
+<blockquote><strong>Autor:</strong></blockquote>
+<blockquote><strong>Fecha:</strong> 22/06/2026</blockquote>
+<br>
+<h2>Índice</h2>
+<br>
+<p>1. Mecánicas</p>
+<p>2. Personajes</p>
+<p>3. Narrativa y diálogos</p>
+<p>4. Guía de estilo visual</p>
+<p>5. Relaciones entre sistemas</p>
+<p>6. Notas de diseño</p>
+<br>
+<hr>
+<br>
+<h2>Mecánicas</h2>
+<br>
+<h3>Correr</h3>
+<br>
+<p><strong>Estado:</strong> 🔧 En desarrollo</p>
+<br>
+<p><strong>Descripción:</strong> El personaje corre</p>
+<br>
+<table>
+<tr><th>Campo</th><th>Valor</th></tr>
+<thead>
+</thead><tbody>
+<tr><td>Input</td><td>Shift</td></tr>
+<tr><td>Efecto</td><td>x1,3 velocidad</td></tr>
+<tr><td>Duración</td><td>Instantáneo / Permanente</td></tr>
+</tbody></table>
+<br>
+<hr>
+<br>
+<h3>Dash</h3>
+<br>
+<p><strong>Estado:</strong> 🔧 En desarrollo</p>
+<br>
+<p><strong>Descripción:</strong> El jugador utiliza un dash hacia delante al pulsar Espacio</p>
+<br>
+<table>
+<tr><th>Campo</th><th>Valor</th></tr>
+<thead>
+</thead><tbody>
+<tr><td>Input</td><td>Space</td></tr>
+<tr><td>Efecto</td><td>x2 velocidad</td></tr>
+<tr><td>Duración</td><td>0,5s</td></tr>
+</tbody></table>
+<br>
+<p><strong>Script generado:</strong></p>
+<br>
+<pre><code>
+</code></pre>
+<p>using UnityEngine;</p>
+<br>
+<p>public class Dash : MonoBehaviour</p>
+<p>{</p>
+<p>    public float dashSpeed = 5f; // Velocidad del dash</p>
+<p>    private Rigidbody rb;</p>
+<p>    private bool isDashing = false;</p>
+<br>
+<p>    void Start()</p>
+<p>    {</p>
+<p>        rb = GetComponent\u003cRigidbody\u003e();</p>
+<p>    }</p>
+<br>
+<p>    void Update()</p>
+<p>    {</p>
+<p>        // Verifica si se ha pulsado la tecla de espacio para iniciar el dash</p>
+<p>        if (Input.GetKeyDown(KeyCode.Space) \u0026\u0026 !isDashing)</p>
+<p>        {</p>
+<p>            StartCoroutine(DashCoroutine());</p>
+<p>        }</p>
+<p>    }</p>
+<br>
+<p>    IEnumerator DashCoroutine()</p>
+<p>    {</p>
+<p>        isDashing = true;</p>
+<p>        rb.velocity = transform.forward * dashSpeed; // Aplica velocidad al personaje en la dirección del frente</p>
+<br>
+<p>        yield return new WaitForSeconds(0.5f); // Espera durante 0.5 segundos</p>
+<br>
+<p>        rb.velocity = Vector3.zero; // Detiene el movimiento</p>
+<p>        isDashing = false;</p>
+<p>    }</p>
+<p>}</p>
+<pre><code>
+
+Este script implementa la mecánica de dash para un personaje en Unity utilizando C#. Cuando se presiona la tecla de espacio, el jugador realiza un dash hacia delante durante 0.5 segundos con una velocidad doble.
+</code></pre>
+<br>
+<hr>
+<br>
+<h3>Parry</h3>
+<br>
+<p><strong>Estado:</strong> 💡 Idea</p>
+<br>
+<p><strong>Descripción:</strong> El jugador bloquea en el momento exacto del impacto y reduce todo el daño</p>
+<br>
+<table>
+<tr><th>Campo</th><th>Valor</th></tr>
+<thead>
+</thead><tbody>
+<tr><td>Input</td><td>Click derecho / L2</td></tr>
+<tr><td>Efecto</td><td>Bloquear el daño al completo, y aturde al enemigo 1s</td></tr>
+<tr><td>Duración</td><td>0,3s</td></tr>
+</tbody></table>
+<br>
+<hr>
+<br>
+<h2>Personajes</h2>
+<br>
+<h3>Caballero Oscuro</h3>
+<br>
+<p><strong>Rol:</strong> 👑 Jefe</p>
+<br>
+<p><strong>Descripción:</strong> Enemigo inicial del juego, con una capa negra con capucha, sin dejar ver su rostro.</p>
+<br>
+<p><strong>Historia:</strong> No tiene</p>
+<br>
+<br>
+<p><strong>Estadísticas base:</strong></p>
+<br>
+<table>
+<tr><th>Stat</th><th>Valor</th></tr>
+<thead>
+</thead><tbody>
+<tr><td>Vida</td><td>50</td></tr>
+<tr><td>Ataque</td><td>20</td></tr>
+<tr><td>Defensa</td><td>5</td></tr>
+<tr><td>Velocidad</td><td>2</td></tr>
+</tbody></table>
+<br>
+<p><strong>Habilidades:</strong> Golpe melee sencillo</p>
+<br>
+<p><strong>Mecánicas asociadas:</strong></p>
+<br>
+<li>Correr</li>
+<br>
+<hr>
+<br>
+<h3>Josemi</h3>
+<br>
+<p><strong>Rol:</strong> 🦸 Protagonista</p>
+<br>
+<p><strong>Descripción:</strong> Es un hombre de estatura media, con poco pelo, gafas, y fuerte</p>
+<br>
+<p><strong>Historia:</strong> Fue un hombre que peleo en la primera guerra mundial, dejandole secuelas de por vida</p>
+<br>
+<p><strong>Motivación:</strong> Acabar con las guerras en el mundo</p>
+<br>
+<p><strong>Estadísticas base:</strong></p>
+<br>
+<table>
+<tr><th>Stat</th><th>Valor</th></tr>
+<thead>
+</thead><tbody>
+<tr><td>Vida</td><td>100</td></tr>
+<tr><td>Ataque</td><td>10</td></tr>
+<tr><td>Defensa</td><td>10</td></tr>
+<tr><td>Velocidad</td><td>20</td></tr>
+</tbody></table>
+<br>
+<p><strong>Habilidades:</strong> Golpea con su espada de multiples formas.</p>
+<br>
+<p><strong>Mecánicas asociadas:</strong></p>
+<br>
+<li>Correr</li>
+<li>Dash</li>
+<br>
+<hr>
+<br>
+<h2>Narrativa y diálogos</h2>
+<br>
+<h3>Nuevo árbol</h3>
+<br>
+<p><strong>Estructura:</strong> 8 nodos, 7 conexiones</p>
+<br>
+<p><strong>Líneas de diálogo:</strong></p>
+<br>
+<blockquote><strong>Caballero Oscuro:</strong> "Hola"</blockquote>
+<br>
+<blockquote><strong>Caballero Oscuro:</strong> "Chao"</blockquote>
+<br>
+<p><strong>Puntos de elección:</strong></p>
+<br>
+<li>Hola</li>
+<li>Adios</li>
+<br>
+<hr>
+<br>
+<h2>Guía de estilo visual</h2>
+<br>
+<p><strong>Estilo artístico:</strong> PixelArt</p>
+<br>
+<p>Describe la dirección artística general del juego.</p>
+<p>Ej: 'Juego 2D pixel art con una paleta cálida inspirada en 8-bit clásico.'</p>
+<br>
+<p><strong>Tono y sentimiento:</strong> Describe el sentimiento general que debe transmitir.</p>
+<p>Ej: 'Aventura épica, misterio, nostalgia'</p>
+<br>
+<p><strong>Inspiraciones:</strong> Menciona referencias artísticas.</p>
+<p>Ej: 'Zelda, Super Metroid, Hollow Knight'</p>
+<br>
+<p><strong>Paleta de colores:</strong></p>
+<br>
+<table>
+<tr><th>Color</th><th>Hex</th><th>Uso</th></tr>
+<thead>
+</thead><tbody>
+<tr><td>Azul</td><td>#2B3AB2</td><td>Botones de confirmacion</td></tr>
+</tbody></table>
+<br>
+<p><strong>Tipografías:</strong></p>
+<br>
+<table>
+<tr><th>Nombre</th><th>Tamaño</th><th>Estilo</th><th>Uso</th></tr>
+<thead>
+</thead><tbody>
+<tr><td>Legacy</td><td>13pt</td><td>Bold</td><td>Errores</td></tr>
+</tbody></table>
+<br>
+<p><strong>Guía de UI:</strong> Notas sobre botones, iconos, elementos de UI.</p>
+<p>Ej: 'Bordes redondeados de 4px, sombras suaves'</p>
+<br>
+<p><strong>Restricciones técnicas:</strong> Limitaciones de resolución, paleta limitada, etc.</p>
+<p>Ej: 'Paleta de 16 colores máximo, resolución 320x180'</p>
+<br>
+<hr>
+<br>
+<h2>Relaciones entre sistemas</h2>
+<br>
+<h3>Nuevo Grafo</h3>
+<br>
+<table>
+<tr><th>Mecánica origen</th><th>Relación</th><th>Mecánica destino</th></tr>
+<thead>
+</thead><tbody>
+<tr><td>Correr</td><td>Activa</td><td>Dash</td></tr>
+</tbody></table>
+<br>
+<p><strong>Análisis IA del sistema:</strong></p>
+<br>
+<p>1. Mecánicas sin ninguna conexión: No hay mecánica huérfana detectada en el grafo proporcionado.</p>
+<p>2. Posibles ciclos de dependencia: Existe un ciclo de dependencia entre Correr y Dash, lo cual podría causar problemas si no se maneja correctamente. Por ejemplo, el jugador podría estar corriendo y darse cuenta de que no puede realizar un dash porque está corriendo.</p>
+<p>3. Inconsistencias en las relaciones: No hay inconsistencias evidentes en las relaciones entre mecánicas descritas.</p>
+<p>4. Sugerencias de nuevas conexiones o mecánicas:</p>
+<p>   - Agregar una nueva mecánica como "Salto", que podría activarse mientras corre para añadir velocidad adicional.</p>
+<p>   - Crear una relación entre Dash y otro estado como "Dash Parado" para permitir que el jugador dash en lugar de correr si está parado.</p>
+<br>
+<p>Estas sugerencias pueden complementar el diseño, proporcionando más opciones al jugador y mejorando la experiencia de juego.</p>
+<br>
+<hr>
+<br>
+<h2>Notas de diseño pendientes</h2>
+<br>
+<h3>[Nota] Equilibrar la ventana de parry según el playtest</h3>
+<br>
+<p><em>— Agente IA, 22/06/2026 11:43</em></p>
+<br>
+<h3>[Nota] Parry</h3>
+<br>
+<p>El parry debe sentirse arriesgado pero recompensante.</p>
+<br>
+<p><em>— Jorge, 22/06/2026 11:40</em></p>
+<br>
+<h3>[Idea] Mecánica Dash</h3>
+<br>
+<p>La mecánica Dash permite al jugador impulsar rápidamente en una dirección. La velocidad del dash es x2 la normal y dura 0,5 segundos.</p>
+<br>
+<p><em>— Diseñador, 31/05/2026 13:05</em></p>
+<br>
+<hr>
+<br>
+<br>
+<p><em>Documento generado automáticamente por TFG Toolkit el 22/06/2026 16:39</em></p>
+<br>
+
+</body>
+</html>

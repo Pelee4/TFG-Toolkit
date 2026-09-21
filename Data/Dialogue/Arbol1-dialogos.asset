@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32894cb18739e9f41b59bec37b38ec25, type: 3}
+  m_Name: Arbol1-dialogos
+  m_EditorClassIdentifier: Assembly-CSharp::TFGToolkit.DialogueData
+  TreeName: "Nuevo \xE1rbol"
+  Description: 
+  Scene: 
+  Nodes:
+  - Id: 15fda5fd-6054-447e-bd79-a2320263c791
+    Type: 0
+    PosX: 154
+    PosY: -138
+    CharacterGUID: 
+    DialogueText: 
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  - Id: d2b30c7b-93f8-4bf0-80e6-de43f82a44b4
+    Type: 2
+    PosX: 538
+    PosY: 43
+    CharacterGUID: 
+    DialogueText: 
+    Choices:
+    - Id: 69a461b4-476e-4014-a668-da94ae0aa2a3
+      Text: Hola
+      TargetNodeId: 
+    - Id: cdb1231c-03e0-4459-8439-5b308b4c3c6a
+      Text: Adios
+      TargetNodeId: 
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  - Id: b4cc95a3-8e67-4bcd-b0de-9eba99c65b20
+    Type: 1
+    PosX: 680
+    PosY: 37
+    CharacterGUID: 2e17ce3e4f65d014185f185053949bcd
+    DialogueText: Hola
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  - Id: 095ffdf9-45c0-42dd-918a-6cf66745894e
+    Type: 1
+    PosX: 646
+    PosY: 181
+    CharacterGUID: 2e17ce3e4f65d014185f185053949bcd
+    DialogueText: Chao
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  - Id: a6d60789-2091-44c5-a14a-d5d0d9162a71
+    Type: 3
+    PosX: 215
+    PosY: -49
+    CharacterGUID: 
+    DialogueText: 
+    Choices: []
+    ConditionVar: amabilidad
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: josemi es muy
+  - Id: dcdfac41-c485-4fce-931b-1b9616ddda5c
+    Type: 5
+    PosX: 966
+    PosY: 46
+    CharacterGUID: 
+    DialogueText: 
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  - Id: 1dbd2865-42f0-4c66-9259-47fecc6ee3e5
+    Type: 5
+    PosX: 928
+    PosY: 157
+    CharacterGUID: 
+    DialogueText: 
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  - Id: b3eb8006-749e-4cb1-b093-42b96d76f43c
+    Type: 1
+    PosX: 418
+    PosY: -45
+    CharacterGUID: 22c6cf96ac2fd8348859758880b11d99
+    DialogueText: 
+    Choices: []
+    ConditionVar: 
+    ConditionOp: '>'
+    ConditionValue: 0
+    EventKey: 
+    EndDescription: 
+    DesignerNotes: 
+  Edges:
+  - Id: 15224f20-8c32-4f2e-b9f0-c1c568d3222f
+    SourceNodeId: d2b30c7b-93f8-4bf0-80e6-de43f82a44b4
+    TargetNodeId: b4cc95a3-8e67-4bcd-b0de-9eba99c65b20
+    ChoiceId: 
+    Label: 
+  - Id: 37f11759-75bd-4f58-8cdf-e82454ddfb6d
+    SourceNodeId: d2b30c7b-93f8-4bf0-80e6-de43f82a44b4
+    TargetNodeId: 095ffdf9-45c0-42dd-918a-6cf66745894e
+    ChoiceId: 
+    Label: 
+  - Id: 3303fe1a-1b5f-434b-aef1-c7ca43124eb4
+    SourceNodeId: 15fda5fd-6054-447e-bd79-a2320263c791
+    TargetNodeId: a6d60789-2091-44c5-a14a-d5d0d9162a71
+    ChoiceId: 
+    Label: 
+  - Id: 15f5b701-e4fc-4db3-9850-5f3de0300f87
+    SourceNodeId: b4cc95a3-8e67-4bcd-b0de-9eba99c65b20
+    TargetNodeId: dcdfac41-c485-4fce-931b-1b9616ddda5c
+    ChoiceId: 
+    Label: 
+  - Id: d06ae7dd-ee49-4f29-a1bf-b63b0ff59f0e
+    SourceNodeId: 095ffdf9-45c0-42dd-918a-6cf66745894e
+    TargetNodeId: 1dbd2865-42f0-4c66-9259-47fecc6ee3e5
+    ChoiceId: 
+    Label: 
+  - Id: 1536d729-db53-452f-b903-5b33bab42edc
+    SourceNodeId: a6d60789-2091-44c5-a14a-d5d0d9162a71
+    TargetNodeId: b3eb8006-749e-4cb1-b093-42b96d76f43c
+    ChoiceId: 
+    Label: 
+  - Id: 46818e33-185b-422d-be3e-c4f0e4d0ed9b
+    SourceNodeId: b3eb8006-749e-4cb1-b093-42b96d76f43c
+    TargetNodeId: d2b30c7b-93f8-4bf0-80e6-de43f82a44b4
+    ChoiceId: 
+    Label: 
+  LastAIAnalysis: 

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ed2380201e1974a8fc45c6fe2348bf, type: 3}
+  m_Name: Protagonista
+  m_EditorClassIdentifier: 
+  characterName: 'Kai '
+  role: 0
+  description: "Joven \xE1gil de complexi\xF3n ligera, ropa azul y bufanda \xE1mbar"
+  backstory: Explorador de unas ruinas flotantes en busca de reliquias antiguas
+  motivation: " Recuperar el artefacto que devolver\xE1 la energ\xEDa a su aldea"
+  health: 100
+  attack: 15
+  defense: 8
+  speed: 6
+  abilities: "movimiento \xE1gil, salto preciso y combate cuerpo a cuerpo"
+  relatedMechanics:
+  - {fileID: 11400000, guid: 51f7d4d9ec4cd70429224b38e7b79f7c, type: 2}
+  - {fileID: 11400000, guid: 6ad202dbefd92214790cc4df3c7bce40, type: 2}
+  designNotes: 

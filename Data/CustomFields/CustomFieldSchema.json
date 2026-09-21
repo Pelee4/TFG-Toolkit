@@ -1,0 +1,13 @@
+{
+    "MechanicFields": [
+        {
+            "Id": "a0e1e1e0-6cf4-49b1-938f-4baeefe7d438",
+            "Label": "Datos adicionales",
+            "Type": 0,
+            "DropdownOptions": [],
+            "DefaultValue": "",
+            "ShowInCard": true
+        }
+    ],
+    "CharacterFields": []
+}

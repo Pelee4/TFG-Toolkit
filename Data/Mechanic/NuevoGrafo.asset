@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4756ae61fd7304d489e8892f824d9106, type: 3}
+  m_Name: NuevoGrafo
+  m_EditorClassIdentifier: Assembly-CSharp::TFGToolkit.MechanicGraphData
+  GraphName: Nuevo Grafo
+  Description: 
+  Nodes:
+  - Id: 2748143c-b33d-4810-971a-c34fc5f5c012
+    MechanicId: 9d577810beb11c249b3866b33623d6b4
+    PosX: -83
+    PosY: 119
+  - Id: 34ee46eb-4cd8-4005-b851-ddd4a556b9f7
+    MechanicId: b8fb658afc7a93c409848b639d8787ee
+    PosX: 385
+    PosY: -49
+  - Id: 3dfdfd85-25fa-4fd2-b960-032216410b57
+    MechanicId: 5d1e1dd13e6ddef42a8a73a0db592e21
+    PosX: 69
+    PosY: 133
+  Edges:
+  - Id: 6d77a9ec-725f-4445-924c-fad5be336d8f
+    SourceNodeId: 2748143c-b33d-4810-971a-c34fc5f5c012
+    TargetNodeId: 3dfdfd85-25fa-4fd2-b960-032216410b57
+    Relation: 0
+    Label: 
+  LastAIAnalysis: "1. Mec\xE1nicas sin ninguna conexi\xF3n: No hay mec\xE1nica hu\xE9rfana
+    detectada en el grafo proporcionado.\n2. Posibles ciclos de dependencia: Existe
+    un ciclo de dependencia entre Correr y Dash, lo cual podr\xEDa causar problemas
+    si no se maneja correctamente. Por ejemplo, el jugador podr\xEDa estar corriendo
+    y darse cuenta de que no puede realizar un dash porque est\xE1 corriendo.\n3.
+    Inconsistencias en las relaciones: No hay inconsistencias evidentes en las relaciones
+    entre mec\xE1nicas descritas.\n4. Sugerencias de nuevas conexiones o mec\xE1nicas:\n  
+    - Agregar una nueva mec\xE1nica como \"Salto\", que podr\xEDa activarse mientras
+    corre para a\xF1adir velocidad adicional.\n   - Crear una relaci\xF3n entre Dash
+    y otro estado como \"Dash Parado\" para permitir que el jugador dash en lugar
+    de correr si est\xE1 parado.\n\nEstas sugerencias pueden complementar el dise\xF1o,
+    proporcionando m\xE1s opciones al jugador y mejorando la experiencia de juego."

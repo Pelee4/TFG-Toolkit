@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4756ae61fd7304d489e8892f824d9106, type: 3}
+  m_Name: mecanica-salto
+  m_EditorClassIdentifier: Assembly-CSharp::TFGToolkit.MechanicGraphData
+  GraphName: Nuevo Grafo
+  Description: 
+  Nodes:
+  - Id: df3f69b0-4973-442b-b5e6-87f0fa699718
+    MechanicId: 32008f9d2b4449f4e8f5f2c1915ae745
+    PosX: 402
+    PosY: 95
+  - Id: f79c8338-40c0-4925-ada7-7a999eec6877
+    MechanicId: 51f7d4d9ec4cd70429224b38e7b79f7c
+    PosX: 89
+    PosY: 82
+  - Id: f7b7f991-aff2-4df4-8181-26d62bf5a3cb
+    MechanicId: 6ad202dbefd92214790cc4df3c7bce40
+    PosX: 62
+    PosY: 307
+  - Id: 6915f2b3-f7d0-4d5e-9aed-249277a6a95e
+    MechanicId: b8fb658afc7a93c409848b639d8787ee
+    PosX: 366
+    PosY: 307
+  Edges:
+  - Id: 26dbd285-ba0f-42cc-b9cb-4bc19174f93c
+    SourceNodeId: f79c8338-40c0-4925-ada7-7a999eec6877
+    TargetNodeId: df3f69b0-4973-442b-b5e6-87f0fa699718
+    Relation: 0
+    Label: 
+  - Id: 691c34b0-3994-4e86-aa9d-f1c970a5b917
+    SourceNodeId: f7b7f991-aff2-4df4-8181-26d62bf5a3cb
+    TargetNodeId: 6915f2b3-f7d0-4d5e-9aed-249277a6a95e
+    Relation: 0
+    Label: 
+  LastAIAnalysis: 
