@@ -112,7 +112,3 @@ El Toolkit se desarrolló y validó como parte de un TFG, no como un producto ce
 ## Autor
 
 Jorge Pelegrín, Grado en Ingeniería Multimedia, Universidad de Alicante.
-
-## Licencia
-
-`[elegir licencia: por ejemplo MIT, o añadir un archivo LICENSE]`
